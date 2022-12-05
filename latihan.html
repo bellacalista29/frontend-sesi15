@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Events</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <button id="idClick">click</button>
+    <button id="dblClick">double click</button><br><br>
+    <div id="box1" style="background-color: blue; height: 300px; width : 300px;">
+
+    </div><br>
+    <input id="idKeypress" type="text"><br><br>
+    <input id="idFocus" type="text"><br><br>
+    <input id="idBlur" type="text"><br><br>
+    <select id="idChange">
+        <option value="balmond">balmond</option>
+        <option value="akai">akai</option>
+        <option value="nana">nana</option>
+    </select><br>
+    
+    <script>
+        // event saat button diclick
+        $("#idClick").on("click", function () {
+            alert("button clicked");
+        })
+        // event saat button di double click
+        $("#dblClick").on("dblclick", function () {
+            alert("button clicked");
+        })
+        //event saat mouse ke dalam box
+        // $("#box1").on("mouseover", function() {
+        //     alert("div mouseover");
+        // })
+        //event saat mouse ke luar box
+        // $("#box1").on("mouseleave", function () {
+        //     alert("div mouseleave");
+        // })
+        //event saat memencet tombol di keyboard
+        // $("#idKeypress").on("keypress", function () {
+        //     alert("keypress");
+        // })
+        //event saat click di input lalu akan focus dan aktif
+        // $("#idFocus").on("focus", function () {
+        //     console.log("focus");
+        // })
+        //kebalikan dari focus, saat input sudah tidak aktif dan tidak focus
+        $("#idBlur").on("blur", function () {
+            console.log("blur");
+        })
+
+        $("#idChange").on("change", function () {
+            console.log(this.value);
+        })
+
+    </script>
+</body>
+
+</html>
